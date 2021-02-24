@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+
+<link rel=icon href=/assets/favicon.png>
+
+          <link rel="stylesheet" href="/css/main.css">
+
+{% if page.css %}
+
+  <link rel="stylesheet" href="/css/{{page.css}}.css">
+{% endif %}
+
+<script src=assets/p_phaser.min.js></script>
+
+{% if page.js %}
+
+  <script src='{{ site.baseurl }}/assets/{{ page.js }}.js'></script>
+{% endif %}
+
+
+</head>
+
+<body>
+    
+	<div class="container">
+
+<h4 style="margin: 20px;">Timo's</h4>
+
+<ul class=list-unstyled>
+
+  {% for item in site.data.navigation %}
+  <li><a href={{item.link}} {% if page.url==item.link %} id=active {% endif %}>{{ item.name|capitalize }}</a></li>
+{% endfor %}
+</ul>
+
+<br>
+
+<h4 style="margin-top: 50px;">{{page.title|capitalize}}</h4>
+
+		<div style="margin-top: 30px;">{{ content }}</div>
+
+		<footer>
+{% if page.js %}
+<div id=src style='margin-top:30px'>
+<a href=https://github.com/tik9/tik9.github.io/tree/main/assets/{{page.js}}.js>Source for {{ page.title |capitalize}} on Github</a>
+</div>
+{% endif %}
+		<div style="margin-bottom: 40px;margin-top: 50px;">
+        	<div id=links></div>
+          <span style="display:inline-block; width: 100px;"></span>Made in: Germany | Host: Github
+
+</div>
+		</footer>
+	</div><!-- /.container -->
+
+<script>
+
+if (navigator.appVersion.indexOf("Win")!=-1) os='Windows';
+
+url=window.location
+// console.log('os',os)
+
+
+if (url.host == 'localhost:4000'){
+    document.title='lh-'
+
+}
+document.title+='{{ page.title |capitalize}} - Timo\'s'
+document.addEventListener('keydown',kdhandler,false)
+
+keycodes=[1,2,3, 'Arrow up', 'Return']
+
+function kdhandler(e){
+    //console.log('keycodes: ',keycodes.toString(),'|',e.key)
+    switch(e.key){
+        case '1':
+        location.href='w3.html'
+        break
+        case '3':
+        location.href='/README.html'
+        break
+        case '2':
+        location.href='/breakout.html'
+        break
+
+    }
+}
+
+</script>
+
+</body>
+
+</html>
