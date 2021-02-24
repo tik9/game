@@ -34,7 +34,7 @@ Phaser |create| Physics: Arcade
 #### Improvements
 
 Site|Feature|Detail
--|-|
+-|-|-
 breakout|Keys|Left and right keys before Game Start
 breakout|Mouse Control|Bottom Mouse movements below Canvas should not move the paddle
 breakout|Loop|show modal when live is gone
