@@ -37,7 +37,7 @@
 <ul class=list-unstyled>
 
   {% for item in site.data.navigation %}
-  <li><a href={{item.link}} {% if page.url==item.link %} id=active {% endif %}>{{ item.name|capitalize }}</a></li>
+  <li><a href={{ site.baseurl }}{{item.link}} {% if page.url==item.link %} id=active {% endif %}>{{ item.name|capitalize }}</a></li>
 {% endfor %}
 </ul>
 

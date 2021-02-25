@@ -1,0 +1,53 @@
+---
+layout: default
+title: Contact
+---
+
+<div id=contact style="margin-top: 40px;">
+
+<h5>Two ways:</h5>
+- <span class=mail>window.atob('dXNlcjE1MzAxNUBnbWFpbC5jb20=')</span><br>
+- Form - see below 
+
+<div style='margin-top:40px'></div>
+
+<form class=mail id="fs-frm" accept-charset="utf-8" method="post">
+    <div class=form-group>
+
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" placeholder="First and Last" class=form-control required="">
+    </div>
+    
+    <div class=form-group>
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" class=form-control required="">
+    </div>
+    
+    <div class=form-group>
+      <label for=quality>The website is high in quality.</label>
+      <select name="quality" id="quality" class=form-control required="">
+        <option value="Choose" selected="" disabled="">Choose</option>
+        <option value="3">Agree</option>
+        <option value="5">Neutral</option>
+        <option value="7">Disagree</option>
+      </select>
+    </div>
+    
+    <div>
+    <label for="message">Additional Comments</label>
+    <textarea rows="3" class=form-control name="message" id="message" placeholder="Enter message" required=""></textarea>
+    </div>
+    
+    <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
+
+    <button  class='btn btn-primary' style="margin-top: 20px;">Submit</button>
+</form>
+</div>
+
+<script>
+mail=window.atob('dXNlcjE1MzAxNUBnbWFpbC5jb20=')
+//console.log()
+//document.getElementsByClassName('mail')[0].textContent=mail
+document.getElementsByClassName('mail')[1].action= 'https://formspree.io/f/'+mail
+
+</script>
