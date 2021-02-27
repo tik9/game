@@ -1,8 +1,7 @@
 ---
 layout: default
 title: breakout game
-js: breakout
-css: game
+js: breakout2
 ---
 
 <span style="display:inline-block; width: 50px;"></span>
@@ -46,8 +45,3 @@ css: game
 
 
 </div>
-
-<script>
-//    console.log('star')
-
-</script>

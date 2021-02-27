@@ -1,7 +1,16 @@
 ---
 ---
 
-canvas { background: #eee; display: left; margin: 0 auto; }
+a#active {
+    font-weight: bold;
+}
+
+.list-unstyled li {
+    float: left;
+    margin: 0 15px
+}
+
+canvas { background: #eee; border:1px solid #d3d3d3;}
 
 
 .modal {

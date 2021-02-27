@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Touch game
-js: w7
-css: game
+js: w9
 ---
 
-<canvas id=mycanvas></canvas>
+<canvas id=canvas></canvas>
+
+<button id=start_game>Start</button>
+<button id=stop_game>Stop</button>
 
 <button id=moveup class=btn>up</button>
 <button id=movedown class=btn>down</button>

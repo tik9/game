@@ -1,5 +1,5 @@
 window.onload=function() {
-//console.log('bro js fil')
+console.log(3)
 
 over = document.getElementById('over');
 win = document.getElementById('win');
@@ -25,7 +25,6 @@ paddleX = (canvas.width-paddleWidth)/2;
  leftPressed = false;
 var brickRowCount = 2
 var brickColumnCount = 3
-score=5
 score=0
 
 var bricks = [];
@@ -88,7 +87,6 @@ function drawBall() {
 }
 
 function drawPaddle() {
-    // console.log('dp')
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
     ctx.fillStyle = "red";
@@ -164,7 +162,7 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                //console.log('game o., x, right paddle',x,paddleX+paddleWidth)
+                console.log('lost')
                 over.style.display = 'block';
                 clearInterval(interval); 
             }
@@ -199,12 +197,12 @@ function paddlemove(){
 s=10
 var interval
 
-function startgame(e){
+function start_game(e){
     //console.log('start game',e.target.id)
  interval = setInterval(draw, s);
 }
 
-document.getElementById("start_game").addEventListener ("click", startgame);
+document.getElementById("start_game").addEventListener ("click", start_game);
 document.getElementsByClassName('close')[0].addEventListener ("click", function(){
     location.reload()
     });

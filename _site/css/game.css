@@ -1,4 +1,8 @@
-canvas { background: #eee; display: left; margin: 0 auto; }
+a#active { font-weight: bold; }
+
+.list-unstyled li { float: left; margin: 0 15px; }
+
+canvas { background: #eee; border: 1px solid #d3d3d3; }
 
 .modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */ padding-top: 100px; /* Location of the box */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */ }
 
