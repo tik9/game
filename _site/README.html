@@ -15,18 +15,15 @@
 
 
 
-<script src=assets/p_phaser.min.js></script>
+<script src=assets/phaser.js></script>
 
 
 
-  <script src='/assets/readme.js'></script>
-
+  <script src='/assets/readme2.js'></script>
 
 
 </head>
-
-<body>
-    
+<body>    
 	<div class="container">
 
 <h4 style="margin: 20px;">Timo's</h4>
@@ -52,7 +49,7 @@
 
 <p><br /></p>
 
-<h4 id="start-drawing">Start Drawing</h4>
+<h4 id="draw-with-the-mouse">Draw with the mouse</h4>
 <p><br /></p>
 
 <canvas id="canvas" width="200" height="300" style='background:#eee'></canvas>
@@ -64,26 +61,30 @@
 <br /></p>
 
 <h4 id="games">Games</h4>
-<p><br /></p>
 
 <table class="table-striped table-bordered">
   <thead>
     <tr>
       <th>Page</th>
-      <th>Function</th>
+      <th>Description</th>
       <th>Comment</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Breakout</td>
-      <td>Keyuphandler</td>
-      <td>helper</td>
+      <td>Arcade game with paddles</td>
+      <td>from MDN</td>
     </tr>
     <tr>
       <td>Phaser</td>
-      <td>create</td>
-      <td>Physics: Arcade</td>
+      <td>Arcade game with paddles</td>
+      <td>uses framework Phaser</td>
+    </tr>
+    <tr>
+      <td>W3 Game</td>
+      <td>Tbd</td>
+      <td>In progress</td>
     </tr>
   </tbody>
 </table>
@@ -124,7 +125,7 @@
 		<footer>
 
 <div id=src style='margin-top:30px'>
-<a href=https://github.com/tik9/tik9.github.io/tree/main/assets/readme.js>Source for  on Github</a>
+<a href=https://github.com/tik9/game/tree/main/assets/readme2.js>Source for Readme2,js on Github</a>
 </div>
 
 		<div style="margin-bottom: 40px;margin-top: 50px;">
@@ -156,7 +157,7 @@ function kdhandler(e){
     //console.log('keycodes: ',keycodes.toString(),'|',e.key)
     switch(e.key){
         case '1':
-        location.href='w3.html'
+        location.href='w.html'
         break
         case '3':
         location.href='/README.html'

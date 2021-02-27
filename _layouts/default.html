@@ -18,18 +18,15 @@
   <link rel="stylesheet" href="/css/{{page.css}}.css">
 {% endif %}
 
-<script src=assets/p_phaser.min.js></script>
+<script src=assets/phaser.js></script>
 
 {% if page.js %}
 
   <script src='{{ site.baseurl }}/assets/{{ page.js }}.js'></script>
 {% endif %}
 
-
 </head>
-
-<body>
-    
+<body>    
 	<div class="container">
 
 <h4 style="margin: 20px;">Timo's</h4>
@@ -50,7 +47,7 @@
 		<footer>
 {% if page.js %}
 <div id=src style='margin-top:30px'>
-<a href=https://github.com/tik9/tik9.github.io/tree/main/assets/{{page.js}}.js>Source for {{ page.title |capitalize}} on Github</a>
+<a href=https://github.com/tik9/game/tree/main/assets/{{page.js}}.js>Source for {{ page.js |capitalize}},js on Github</a>
 </div>
 {% endif %}
 		<div style="margin-bottom: 40px;margin-top: 50px;">
@@ -82,7 +79,7 @@ function kdhandler(e){
     //console.log('keycodes: ',keycodes.toString(),'|',e.key)
     switch(e.key){
         case '1':
-        location.href='w3.html'
+        location.href='w.html'
         break
         case '3':
         location.href='/README.html'
