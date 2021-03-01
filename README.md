@@ -1,12 +1,12 @@
 ---
 layout: default
-js: readme
+js: readme2
 ---
 ### A Javascript and Game Repo
 
 <br>
 
-#### Start Drawing
+#### Draw with the mouse
 <br>
 
 {::nomarkdown}
@@ -20,12 +20,12 @@ js: readme
 <br>
 
 #### Games
-<br>
 
-Page|Function|Comment
+Page|Description|Comment
 -|-|-
-Breakout |Keyuphandler|helper
-Phaser |create| Physics: Arcade
+Breakout | Arcade game with paddles|from MDN
+Phaser |Arcade game with paddles| uses framework Phaser
+W3 Game|Tbd|In progress
 {:.table-striped .table-bordered}
 
 <br>

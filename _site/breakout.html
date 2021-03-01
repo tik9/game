@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css>
+
+    <script src=https://code.jquery.com/jquery-3.5.1.min.js ></script>
+
+<link rel=icon href='/assets/favicon.png'>
+
+<link rel="stylesheet" href='/css/main.css'>
+
+
+
+  <link rel="stylesheet" href='/css/game.css'>
+
+
+<script src='/assets/p_phaser.min.js'></script>
+
+
+
+  <script src='/assets/breakout.js'></script>
+
+
+
+</head>
+
+<body>
+    
+	<div class="container">
+
+<h4 style="margin: 20px;">Timo's</h4>
+
+<ul class=list-unstyled>
+
+  
+  <li><a href=/README.html >Home</a></li>
+
+  <li><a href=/breakout.html  id=active >Breakout</a></li>
+
+  <li><a href=/phase.html >Phaser</a></li>
+
+  <li><a href=/contact.html >Contact</a></li>
+
+</ul>
+
+<br>
+
+<h4 style="margin-top: 50px;">Breakout game</h4>
+
+		<div style="margin-top: 30px;"><span style="display:inline-block; width: 50px;"></span>
+<button id=start_game class='btn btn-primary'>
+  Start Game</button> 
+  <div style="margin: 30px;"></div>
+  
+  Move the paddle either a) with left and right keys or b) with the mouse. <br>Try the mouse handle before clicking the start button. <br>You have 2 lives and need to kill 6 bricks.
+
+<div id=over class=modal>
+
+  <div class='modal-content'>
+    <span class=close>&times;</span>
+    <p>Game Over</p>
+  </div>
+
+</div>
+
+<div id=win class=modal>
+
+  <div class='modal-content'>
+  <span class=close>&times;</span>
+  <p>You won</p>
+  </div>
+
+</div>
+
+<div id=live class=modal>
+
+  <div class='modal-content'>
+    <span class=close id=live>&times;</span>
+    <p>You lost one live</p>
+  </div>
+
+</div>
+
+<div id=canvas style='margin-top:70px;margin-bottom:70px'>
+
+
+<canvas id=myCanvas></canvas>
+
+
+</div>
+
+<script>
+//    console.log('star')
+
+</script>
+</div>
+
+		<footer>
+
+<div id=src style='margin-top:30px'>
+<a href=https://github.com/tik9/tik9.github.io/tree/main/assets/breakout.js>Source for Breakout game on Github</a>
+</div>
+
+		<div style="margin-bottom: 40px;margin-top: 50px;">
+        	<div id=links></div>
+          <span style="display:inline-block; width: 100px;"></span>Made in: Germany | Host: Github
+
+</div>
+		</footer>
+	</div><!-- /.container -->
+
+<script>
+
+if (navigator.appVersion.indexOf("Win")!=-1) os='Windows';
+
+url=window.location
+// console.log('os',os)
+
+
+if (url.host == 'localhost:4000'){
+    document.title='lh-'
+
+}
+document.title+='Breakout game - Timo\'s'
+document.addEventListener('keydown',kdhandler,false)
+
+keycodes=[1,2,3, 'Arrow up', 'Return']
+
+function kdhandler(e){
+    //console.log('keycodes: ',keycodes.toString(),'|',e.key)
+    switch(e.key){
+        case '1':
+        location.href='w3.html'
+        break
+        case '3':
+        location.href='/README.html'
+        break
+        case '2':
+        location.href='/breakout.html'
+        break
+
+    }
+}
+
+</script>
+
+</body>
+
+</html>

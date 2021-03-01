@@ -9,47 +9,53 @@
 
     <script src=https://code.jquery.com/jquery-3.5.1.min.js ></script>
 
-<link rel=icon href='{{ site.baseurl }}/assets/favicon.png'>
+<link rel=icon href='/assets/favicon.png'>
 
-<link rel="stylesheet" href='{{ site.baseurl }}/css/main.css'>
+<link rel="stylesheet" href='/css/main.css'>
 
-{% if page.css %}
 
-  <link rel="stylesheet" href='{{ site.baseurl }}/css/{{page.css}}.css'>
-{% endif %}
 
-<script src='{{ site.baseurl }}/assets/phaser.js'></script>
+<script src='/assets/p_phaser.min.js'></script>
 
-{% if page.js %}
 
-  <script src='{{ site.baseurl }}/assets/{{ page.js }}.js'></script>
-{% endif %}
+
+  <script src='/assets/phase.js'></script>
+
+
 
 </head>
-<body>    
+
+<body>
+    
 	<div class="container">
 
 <h4 style="margin: 20px;">Timo's</h4>
 
 <ul class=list-unstyled>
 
-  {% for item in site.data.navigation %}
-  <li><a href={{ site.baseurl }}{{item.link}} {% if page.url==item.link %} id=active {% endif %}>{{ item.name|capitalize }}</a></li>
-{% endfor %}
+  
+  <li><a href=/README.html >Home</a></li>
+
+  <li><a href=/breakout.html >Breakout</a></li>
+
+  <li><a href=/phase.html  id=active >Phaser</a></li>
+
+  <li><a href=/contact.html >Contact</a></li>
+
 </ul>
 
 <br>
 
-<h4 style="margin-top: 50px;">{{page.title|capitalize}}</h4>
+<h4 style="margin-top: 50px;">Phaser</h4>
 
-		<div style="margin-top: 30px;">{{ content }}</div>
+		<div style="margin-top: 30px;"></div>
 
 		<footer>
-{% if page.js %}
+
 <div id=src style='margin-top:30px'>
-<a href=https://github.com/tik9/game/tree/master/assets/{{page.js}}.js>Source for {{ page.js |capitalize}},js on Github</a>
+<a href=https://github.com/tik9/tik9.github.io/tree/main/assets/phase.js>Source for Phaser on Github</a>
 </div>
-{% endif %}
+
 		<div style="margin-bottom: 40px;margin-top: 50px;">
         	<div id=links></div>
           <span style="display:inline-block; width: 100px;"></span>Made in: Germany | Host: Github
@@ -70,7 +76,7 @@ if (url.host == 'localhost:4000'){
     document.title='lh-'
 
 }
-document.title+='{{ page.title |capitalize}} - Timo\'s'
+document.title+='Phaser - Timo\'s'
 document.addEventListener('keydown',kdhandler,false)
 
 keycodes=[1,2,3, 'Arrow up', 'Return']
@@ -79,7 +85,7 @@ function kdhandler(e){
     //console.log('keycodes: ',keycodes.toString(),'|',e.key)
     switch(e.key){
         case '1':
-        location.href='w.html'
+        location.href='w3.html'
         break
         case '3':
         location.href='/README.html'

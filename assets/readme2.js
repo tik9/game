@@ -1,9 +1,10 @@
 window.onload=function(){
+console.log() 
 
 var canvas = document.getElementById('canvas');
 canvas.fillstyle
 var ctx = canvas.getContext('2d');
-//Variables
+
 var canvasx = $(canvas).offset().left;
 var canvasy = $(canvas).offset().top;
 var last_mousex = last_mousey = 0;
@@ -11,19 +12,16 @@ var mousex = mousey = 0;
 var mousedown = false;
 var tooltype = 'draw';
 
-//Mousedown
 $(canvas).on('mousedown', function(e) {
     last_mousex = mousex = parseInt(e.clientX-canvasx);
 	last_mousey = mousey = parseInt(e.clientY-canvasy);
     mousedown = true;
 });
 
-//Mouseup
 $(canvas).on('mouseup', function(e) {
     mousedown = false;
 });
 
-//Mousemove
 $(canvas).on('mousemove', function(e) {
     mousex = parseInt(e.clientX-canvasx);
     mousey = parseInt(e.clientY-canvasy);
@@ -45,7 +43,7 @@ $(canvas).on('mousemove', function(e) {
     last_mousex = mousex;
     last_mousey = mousey;
     //Output
-    $('#output').html('current: '+mousex+', '+mousey+'<br/>last: '+last_mousex+', '+last_mousey+'<br/>mousedown: '+mousedown);
+    $('#output').html('current: '+mousex+', '+mousey+'<br/> mousedown: '+mousedown);
 });
 
 //Use draw|erase
