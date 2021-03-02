@@ -1,12 +1,11 @@
 ---
 layout: default
 js: readme2
+title: Welcome to the Game
 ---
-### A Javascript and Game Repo
 
-<br>
 
-#### Draw with the mouse
+##### Draw with the mouse
 <br>
 
 {::nomarkdown}
@@ -19,7 +18,7 @@ js: readme2
 <br>
 <br>
 
-#### Games
+##### Games
 
 Page|Description|Comment
 -|-|-
@@ -31,7 +30,7 @@ W3 Game|Tbd|In progress
 <br>
 <br>
 
-#### Improvements
+##### Work in progress
 
 Site|Feature|Detail
 -|-|-
